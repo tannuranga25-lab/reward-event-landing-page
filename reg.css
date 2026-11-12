@@ -1,0 +1,116 @@
+/* --- THEME VARIABLES --- */
+:root {
+    --bg-light: #f1f5f9;
+    --primary-dark: #0f172a;
+    --primary-purple: #7c3aed;
+    --neon-blue: #0ea5e9;
+    --text-muted: #64748b;
+    --font-main: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+/* Flexbox logic to center the form on the whole screen */
+body {
+    background-color: var(--bg-light);
+    color: var(--primary-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Screen ki poori height lega */
+}
+
+/* Container constraints */
+.form-wrapper {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: var(--primary-purple);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: var(--neon-blue);
+}
+
+/* Form Card Styling */
+.form-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    /* Top par ek premium colored border */
+    border-top: 5px solid var(--primary-purple); 
+}
+
+.form-card h2 {
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.form-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+/* Inputs Structure */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Focus State: Jab user type karne click karega */
+.input-group input:focus {
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1); /* Subtle glowing ring */
+}
+
+/* Submit Button */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background: #8A2BE2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+}
